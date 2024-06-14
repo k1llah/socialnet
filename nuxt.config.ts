@@ -7,25 +7,35 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       bodyAttrs: {
-        class: "dark:bg-[#0a0a0a]"
+        class: "dark:bg-[#09090b]"
       },
-      
     },
   },
-  css: ['@/main.css'],
+  css: ['@/assets/css/tailwind.css'],
   
   modules: [[
     '@pinia/nuxt',
     {
       autoImports: ['defineStore']
     }
-  ], "@nuxtjs/tailwindcss", '@formkit/auto-animate', '@vueuse/nuxt', 'nuxt-swiper', "@dargmuesli/nuxt-cookie-control", "nuxt-lodash", "@pinia/nuxt"],
+  ], "@nuxtjs/tailwindcss", '@formkit/auto-animate', '@vueuse/nuxt', 'nuxt-swiper', "@dargmuesli/nuxt-cookie-control", "nuxt-lodash", "@pinia/nuxt", "shadcn-nuxt", '@nuxtjs/color-mode'],
+  shadcn: {
+    /**
+     * Prefix for all the imported component
+     */
+    prefix: '',
+    /**
+     * Directory that the component lives in.
+     * @default "./components/ui"
+     */
+    componentDir: './components/ui'
+  },
   pinia: {
     storesDirs: ['./stores/**', './stores'],
   },
   imports: {
     autoImport: true,
-    dirs: ['./stores/**', '.components/**', '/components/main-components/**',  './components/**/*/*', './components/adminComponents/**/*', './components/adminComponents/**/*', './components/adminComponents/**/*/*/*'],
+    dirs: ['./stores/**', '.components/**', '/components/main-components/**',  './components/**/*/*', './components/adminComponents/**/*', './components/adminComponents/**/*', './components/adminComponents/**/*/*/*', './features/**/*/*', './features/**/*', './features/**/*/*/*', './features/**/*/*/*/*', './features/**/*/*/*/*/*', './widgets/**/*/*', './widgets/**/*', './widgets/**/*/*/*', './widgets/**/*/*/*/*', './widgets/**/*/*/*/*/*'],
   },
   components: [
     {
