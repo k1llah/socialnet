@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     {
       autoImports: ['defineStore']
     }
-  ], "@nuxtjs/tailwindcss", '@formkit/auto-animate', '@vueuse/nuxt', 'nuxt-swiper', "@dargmuesli/nuxt-cookie-control", "nuxt-lodash", "@pinia/nuxt"],
+  ], "@nuxtjs/tailwindcss", '@formkit/auto-animate', '@vueuse/nuxt', 'nuxt-swiper', "@dargmuesli/nuxt-cookie-control", "nuxt-lodash", "@pinia/nuxt", "shadcn-nuxt"],
   pinia: {
     storesDirs: ['./stores/**', './stores'],
   },
