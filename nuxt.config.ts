@@ -19,6 +19,17 @@ export default defineNuxtConfig({
       autoImports: ['defineStore']
     }
   ], "@nuxtjs/tailwindcss", '@formkit/auto-animate', '@vueuse/nuxt', 'nuxt-swiper', "@dargmuesli/nuxt-cookie-control", "nuxt-lodash", "@pinia/nuxt", "shadcn-nuxt"],
+  shadcn: {
+    /**
+     * Prefix for all the imported component
+     */
+    prefix: '',
+    /**
+     * Directory that the component lives in.
+     * @default "./components/ui"
+     */
+    componentDir: './components/ui'
+  },
   pinia: {
     storesDirs: ['./stores/**', './stores'],
   },
