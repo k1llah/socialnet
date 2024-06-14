@@ -1,11 +1,14 @@
 <script setup lang="ts">
-import { Button } from '@/components/ui/button'
 
 </script>
 <template>
 	<div>
-	<Button>button</Button>
-	<div class="">a;lkdjsf;lakjdfs</div>
+		<Button as-child :class="'bg-white'">
+    <a href="/login">
+      Login
+    </a>
+  </Button>
+	<div class="bg-white w-10">a;lkdjsf;lakjdfs</div>
 	</div>
 </template>
 

@@ -11,14 +11,14 @@ export default defineNuxtConfig({
       },
     },
   },
-  css: ['@/main.css'],
+  css: ['@/assets/css/tailwind.css'],
   
   modules: [[
     '@pinia/nuxt',
     {
       autoImports: ['defineStore']
     }
-  ], "@nuxtjs/tailwindcss", '@formkit/auto-animate', '@vueuse/nuxt', 'nuxt-swiper', "@dargmuesli/nuxt-cookie-control", "nuxt-lodash", "@pinia/nuxt", "shadcn-nuxt"],
+  ], "@nuxtjs/tailwindcss", '@formkit/auto-animate', '@vueuse/nuxt', 'nuxt-swiper', "@dargmuesli/nuxt-cookie-control", "nuxt-lodash", "@pinia/nuxt", "shadcn-nuxt", '@nuxtjs/color-mode'],
   shadcn: {
     /**
      * Prefix for all the imported component
