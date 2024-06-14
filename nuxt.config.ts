@@ -7,9 +7,8 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       bodyAttrs: {
-        class: "dark:bg-[#0a0a0a]"
+        class: "dark:bg-[#09090b]"
       },
-      
     },
   },
   css: ['@/main.css'],
@@ -25,7 +24,7 @@ export default defineNuxtConfig({
   },
   imports: {
     autoImport: true,
-    dirs: ['./stores/**', '.components/**', '/components/main-components/**',  './components/**/*/*', './components/adminComponents/**/*', './components/adminComponents/**/*', './components/adminComponents/**/*/*/*'],
+    dirs: ['./stores/**', '.components/**', '/components/main-components/**',  './components/**/*/*', './components/adminComponents/**/*', './components/adminComponents/**/*', './components/adminComponents/**/*/*/*', './features/**/*/*', './features/**/*', './features/**/*/*/*', './features/**/*/*/*/*', './features/**/*/*/*/*/*', './widgets/**/*/*', './widgets/**/*', './widgets/**/*/*/*', './widgets/**/*/*/*/*', './widgets/**/*/*/*/*/*'],
   },
   components: [
     {

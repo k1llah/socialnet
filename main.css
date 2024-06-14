@@ -1,3 +1,9 @@
-body{
-	background-color: brown;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+	@apply dark:bg-mainDark  bg-[#d6e7ffc7]
+}
+html {
+  scroll-behavior: smooth;
 }
