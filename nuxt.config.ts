@@ -20,15 +20,8 @@ export default defineNuxtConfig({
     }
   ], "@nuxtjs/tailwindcss", '@formkit/auto-animate', '@vueuse/nuxt', 'nuxt-swiper', "@dargmuesli/nuxt-cookie-control", "nuxt-lodash", "@pinia/nuxt", "shadcn-nuxt", '@nuxtjs/color-mode'],
   shadcn: {
-    /**
-     * Prefix for all the imported component
-     */
-    prefix: '',
-    /**
-     * Directory that the component lives in.
-     * @default "./components/ui"
-     */
-    componentDir: './components/ui'
+    prefix: 'Shadcn',
+    componentDir: './components/Shadcn',
   },
   pinia: {
     storesDirs: ['./stores/**', './stores'],
