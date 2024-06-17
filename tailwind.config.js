@@ -11,13 +11,6 @@ module.exports = {
 	],
   prefix: "",
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    
     screens: {
       'sm': '320px',
       'md': '640px',
@@ -25,17 +18,32 @@ module.exports = {
       'xl': '1280px',
       '2xl': '1536px',
     },
+    container: {
+      center: true,
+      padding: "2rem",
+      size:'200px',
+      screens: {
+        "2xl": "1400px",
+      },
+      screens: {
+        sm: '100%',
+        md: '100%',
+        lg: '960px',
+        xl: '1280px',
+      },
+  
   },
   colors: {
-    'mainDark': '#09090b',
-    'mainBg': '#fff',
-    'darkWhite': '#fafafa',
-    'darkGray': '#a1a1aa',
-    'darkGrayDarken': '#27272a',
-    'greenJuice': '#22c55e',
-    'redJuice': '#e11d48',
-    'darkNightBlue': '#030712',
-    'lightGray': '#d1d1d1'
+    mainDark: '#09090b',
+    mainBg: '#fff',
+    darkWhite: '#fafafa',
+    darkGray: '#a1a1aa',
+    darkGrayDarken: '#27272a',
+    greenJuice: '#22c55e',
+    redJuice: '#e11d48',
+    darkNightBlue: '#030712',
+    lightGray: '#d1d1d1',
+    darkenGray: '#121212',
   },
     extend: {
       keyframes: {

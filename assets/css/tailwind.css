@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 body {
-	@apply dark:bg-mainDark  bg-mainBg
+	@apply dark:bg-mainDark dark:text-darkWhite bg-mainBg
+	
 }
 html {
   scroll-behavior: smooth;
