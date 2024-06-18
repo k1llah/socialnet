@@ -1,28 +1,30 @@
 <script setup lang="ts">
-const inputVal = ref("");
 const props = defineProps({
   errorMessage: String,
+  label: String,
+  name: String,
+  type:String,
 });
-const formControls = useFormControls();
-watch(inputVal, () => {
-  formControls.emailVal = inputVal.value;
-  console.log(inputVal.value);
-});
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const modelInput = defineModel({
+  type: String,
+  // required: true,
+  default: '',
+})
+// const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 </script>
 <template>
   <div>
     <div class="flex flex-col relative">
-      <label for="email" :class="['label-user', { 'label-user-active': inputVal !== '' }]" class="text-darkGray dark:text-darkWhite">Email</label>
+      <label :for="props.name" :class="['label-user', { 'label-user-active': modelInput !== '' }]" class="text-darkGray dark:text-darkWhite">{{ props.label }}</label>
       <input
-        type="email"
+        :type="props.type"
         class="outline-none p-2 rounded-[4px] text-darkGray dark:bg-darkGrayDarken"
-        v-model="inputVal"
+        v-model="modelInput"
       />
       <span
         class=" underline absolute bottom-0 h-[2px] left-0 w-0 transition-width duration-300"
       ></span>
-      <p class="text-red-500" v-if="props.errorMessage !== ''">
+      <p class="text-red-500" v-if="props.errorMessage !== ''" v-auto-animate>
         {{ errorMessage }}
       </p>
     </div>

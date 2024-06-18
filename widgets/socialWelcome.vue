@@ -1,34 +1,65 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 <template>
-	<div class="flex justify-around items-center">
-		<div class="flex justify-center items-center flex-col h-screen">
-      <h1 class="hello dark:text-darkWhite text-2xl font-bold text-center">
-        Welcome to socialnet nuxt!!
-      </h1>
-      <div class="mt-12 flex flex-col ">
+  
+  <div class="flex md:justify-around items-center gap-5 sm:flex-col-reverse md:flex-row sm:justify-center h-screen">
+     <div class="flex justify-center items-center flex-col">
+      <div class="bg-darkPurple bg-opacity-85 p-3 mb-10 border-l-[3px] border-redJuice rounded-md border-opacity-65 w-[300px] typing-effect">
+        <span class="letter" style="animation-delay:100ms">W</span>
+        <span class="letter" style="animation-delay:200ms">e</span>
+        <span class="letter" style="animation-delay:300ms">l</span>
+        <span class="letter" style="animation-delay:400ms">c</span>
+        <span class="letter" style="animation-delay:500ms">o</span>
+        <span class="letter" style="animation-delay:600ms">m</span>
+        <span class="letter" style="animation-delay:700ms">e </span>
+        
+        <span class="letter" style="animation-delay:800ms">! ⭐️</span>
+      </div> 
+   
+      <div
+        class="bg-darkPurple bg-opacity-85 p-3 border-l-[3px] border-redJuice rounded-md border-opacity-65 max-w-[300px] relative"
+      >
+        <img class="w-4 absolute right-4  top-8" src="/commas.svg" alt="" />
+        <p class="text-darkWhite text-sm ">
+         <span class="text-redJuice block pb-2"> We're thrilled to have you join our community! < 3 </span>
+         This is a place where 
+          you can connect, share, and engage with friends, family, and
+          like-minded individuals from around the world. 
+          
+        </p>
+        <ul class="decoration-slice list-disc pl-[25px] text-xs">
+          <li>
+            Find Friends: Use our
+          search feature to connect with people you know or join groups that
+          match your interests.  
+          </li>
+          <li>Share Your Story: Post updates, photos, and
+            videos to share what's happening in your life.</li>
+        </ul>
+        <p class="text-sm pt-3 text-center">Happy networking!</p>
+      </div>
+      <div class="mt-12 flex flex-col">
         <div class="flex gap-2">
-         <img class="w-5" src="/tg.svg" alt=""> <h4 class="dark:text-darkWhite">Socialnetbrand</h4>
+          <img class="w-5" src="/tg.svg" alt="" />
+          <h4 class="dark:text-darkWhite">Socialnetbrand</h4>
         </div>
       </div>
-    </div>		
-    <mainForm/>
-	</div>
+    </div>
+    <mainForm />
+  </div>
 </template>
 <style scoped>
-.hello {
-  animation: hi 1.3s;
-  @keyframes hi {
-    0% {
-      opacity: 0;
-      width: 0%;
-      transform: scale(0.4);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
+.typing-effect {
+  display: flex;
+}
+.letter {
+  display: inline-block;
+  opacity: 0;
+  animation: typing 1.2s forwards;
+  font-size: 18px;
+}
+@keyframes typing {
+  to {
+    opacity: 1;
   }
 }
 </style>
