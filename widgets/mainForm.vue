@@ -3,7 +3,7 @@ const formControls = useFormControls()
 const value = computed(() => formControls.emailVal);
 </script>
 <template>
-	<div class="flex flex-col gap-5 items-center ">
+	<div class="flex flex-col gap-5 items-center">
 		<div class="flex justify-center items-center flex-col p-9 rounded-xl dark:bg-darkenGray border-darkGrayDarken border-[1px] min-w-[310px]">
 			<div class="flex gap-3 flex-col items-center">
 				<img src="/tg.svg" class="max-w-[60px]" alt="">

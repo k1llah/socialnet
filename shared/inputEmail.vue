@@ -13,11 +13,10 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 <template>
   <div>
     <div class="flex flex-col relative">
-			<label for="email" class="label-user text-darkGray dark:text-darkWhite"> Email</label>
+      <label for="email" :class="['label-user', { 'label-user-active': inputVal !== '' }]" class="text-darkGray dark:text-darkWhite">Email</label>
       <input
         type="email"
         class="outline-none p-2 rounded-[4px] text-darkGray dark:bg-darkGrayDarken"
-        placeholder="Enter Email"
         v-model="inputVal"
       />
       <span
@@ -39,16 +38,16 @@ span {
 }
 .label-user {
 	position: absolute;
-	left: 15px;
+	left: 10px;
 	color: #e8e8e8;
 	pointer-events: none;
-	transform: translateY(1rem);
+	transform: translateY(0.50rem);
 	transition: 150ms cubic-bezier(0.4,0,0.2,1);
 }
-.input:focus ~ .label-user, input:valid ~ .label-user {
- transform: translateY(0.25rem) scale(0.8);
- background-color: #212121;
- padding: 0.2em;
- color: #2196f3;
+.label-user-active, .input:focus ~ .label-user {
+  transform: translateY(-1.6rem) scale(0.7);
+  left: 0;
+  padding: 0.2em;
+  color: #2196f3;
 }
 </style>
