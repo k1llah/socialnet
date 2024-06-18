@@ -1,14 +1,14 @@
 <script setup lang="ts"></script>
 <template>
-  <div class="flex justify-between text-sm">
+  <div class="flex md:justify-between text-sm md:flex-row sm:flex-col sm:justify-center sm:items-center sm:gap-5 p-1">
 		<div class="flex gap-3">
 			<a href="#" class="text-greenJuice">SocialNet </a>
 			<p>© 2024</p>
 		</div>
-		<div class="flex gap-5">
-			<NuxtLink to="#">About SocialNet</NuxtLink>
-			<NuxtLink to="#">Rules</NuxtLink>
-			<NuxtLink to="#">Report a problem</NuxtLink>
+		<div class="flex md:gap-5 sm:gap-2 md:text-sm sm:text-xs ">
+			<NuxtLink to="#" class="links">About SocialNet</NuxtLink>
+			<NuxtLink to="#" class="links">Rules</NuxtLink>
+			<NuxtLink to="#" class="links">Report a problem</NuxtLink>
 		</div>
 		<div class="flex gap-5">
 			<NuxtLink to="#">FAQ</NuxtLink>
@@ -17,4 +17,8 @@
 	</div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.links{
+	@apply border-b-[1px] border-darkGrayDarken p-[1px]
+}
+</style>
