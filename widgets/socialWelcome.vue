@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 <template>
-  
-  <div class="flex md:justify-around items-center gap-5 sm:flex-col-reverse md:flex-row sm:justify-center md:h-screen sm:h-auto md:mt-auto sm:mt-5">
+  <div class="md:h-screen sm:h-auto flex flex-col justify-center ">
+  <div class="flex md:justify-around items-center gap-5 sm:flex-col-reverse md:flex-row sm:justify-center  md:mt-[unset] sm:mt-5">
      <div class="flex justify-center items-center flex-col">
       <div class="bg-darkPurple bg-opacity-85 p-3 mb-10 border-l-[3px] border-redJuice rounded-md border-opacity-65 w-[300px] typing-effect">
         <span class="letter" style="animation-delay:100ms">W</span>
@@ -44,8 +44,10 @@
         </div>
       </div>
     </div>
-    <MainForm />
+    <MainForm/>
   </div>
+  <TheFooter class="mt-16"/>
+</div>
 </template>
 <style scoped>
 .typing-effect {
