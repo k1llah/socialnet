@@ -44,6 +44,7 @@ module.exports = {
     darkNightBlue: '#030712',
     lightGray: '#d1d1d1',
     darkenGray: '#121212',
+    nightPurple: '#030712'
   },
     extend: {
       keyframes: {

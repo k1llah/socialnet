@@ -2,7 +2,7 @@
 
 </script>
 <template>
-	<div class="flex justify-center items-center gap-5">
+	<div class="flex justify-around items-center">
 		<div class="flex justify-center items-center flex-col h-screen">
       <h1 class="hello dark:text-darkWhite text-2xl font-bold text-center">
         Welcome to socialnet nuxt!!
