@@ -46,10 +46,13 @@ span {
 	transform: translateY(0.50rem);
 	transition: 150ms cubic-bezier(0.4,0,0.2,1);
 }
-.label-user-active, .input:focus ~ .label-user {
-  transform: translateY(-1.6rem) scale(0.7);
-  left: 0;
+.label-user-active, .input:focus  .label-user {
+  /* transform: ; */
+  margin-top: -1.9rem;
+  font-size: 12px;
+  left: 0px;
   padding: 0.2em;
+  padding-left: 0em;
   color: #2196f3;
 }
 </style>
