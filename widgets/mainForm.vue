@@ -16,8 +16,8 @@ const val = ref('')
 				<img src="/tg.svg" class="max-w-[60px]" alt="">
 				<h2 class="text-xl">Sign in to Socialnet</h2>
 			</div>
-		<InputEmail :label="' Email'" :name="'email'" :type="'email'" v-model="val" class="mt-7"/>
-		<InputEmail :label="'Passwooord'" :name="'password'" :type="'password'" v-model="pass" class="mt-7"/>
+		<TheInput :label="' Email'" :name="'email'" :type="'email'" v-model="val" class="mt-7"/>
+		<TheInput :label="'Password'" :name="'password'" :type="'password'" v-model="pass" class="mt-7"/>
 		<ShadcnButton class="dark:text-darkWhite border-b-[2px] mt-5 rounded-none w-[50%]  hover:transition-all hover:duration-300 transition-all duration-500 hover:dark:text-greenJuice hover:border-greenJuice">Sign in</ShadcnButton>
 	</div>
 	<div class="flex justify-center flex-col items-center gap-3 rounded-xl p-5 dark:bg-darkenGray border-darkGrayDarken border-[1px] min-w-[310px]">

@@ -9,7 +9,7 @@ const router = useRouter();
 </script>
 <template>
   <div>
-   <socialWelcome/>
+   <SocialWelcome/>
    
   </div>
 </template>

@@ -47,7 +47,6 @@ span {
 	transition: 150ms cubic-bezier(0.4,0,0.2,1);
 }
 .label-user-active, .input:focus  .label-user {
-  /* transform: ; */
   margin-top: -1.9rem;
   font-size: 12px;
   left: 0px;

@@ -7,6 +7,7 @@ const toggleDark = useToggle(dark)
   <div>
     <div class="container">
     <NuxtPage />
+    
   </div>
   </div>
 </template>
