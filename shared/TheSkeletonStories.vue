@@ -13,18 +13,17 @@
 
 <style scoped>
 @keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
+  0% {
+    background-position: -200% 0;
   }
-  50% {
-    opacity: 0.5;
+  100% {
+    background-position: 200% 0;
   }
 }
-
 .skeleton {
-  animation: pulse 1.5s infinite;
-  background: #616161;
+  background: linear-gradient(90deg, #2c2c2c 25%, #3b3b3b 50%, #2c2c2c 75%);
+  background-size: 200% 100%;
+  animation: pulse 1.7s infinite;
 }
 
 .skeleton_div {
