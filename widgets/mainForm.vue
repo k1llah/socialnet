@@ -21,8 +21,8 @@ const val = ref('')
 		<ShadcnButton class="dark:text-darkWhite border-b-[2px] mt-5 rounded-none w-[50%]  hover:transition-all hover:duration-300 transition-all duration-500 hover:dark:text-greenJuice hover:border-greenJuice">Sign in</ShadcnButton>
 	</div>
 	<div class="flex justify-center flex-col items-center gap-3 rounded-xl p-5 dark:bg-darkenGray border-darkGrayDarken border-[1px] min-w-[310px]">
-		<p class="text-center mt-2 text-sm">Don't have an account?</p>
-		<ShadcnButton class="dark:text-darkGrayDarken px-2 py-1 bg-greenJuice  rounded-lg w-[40%]">Sign up</ShadcnButton>
+		<p class="text-center mt-2 text-sm hover:text-darkGray transition cursor-pointer">Don't have an account?</p>
+		<ShadcnButton class="dark:text-darkGrayDarken px-2 py-1 bg-greenJuice hover:bg-darkGreenJuice rounded-lg w-[40%]">Sign up</ShadcnButton>
 	</div>
 	</div>
 </template>

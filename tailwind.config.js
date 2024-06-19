@@ -40,6 +40,7 @@ module.exports = {
     darkGray: '#a1a1aa',
     darkGrayDarken: '#27272a',
     greenJuice: '#22c55e',
+    darkGreenJuice: '#22c55e7e',
     redJuice: '#e11d48',
     darkNightBlue: '#030712',
     lightGray: '#d1d1d1',
