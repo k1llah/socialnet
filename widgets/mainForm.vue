@@ -22,7 +22,7 @@ const val = ref('')
 	</div>
 	<div class="flex justify-center flex-col items-center gap-3 rounded-xl p-5 dark:bg-darkenGray border-darkGrayDarken border-[1px] min-w-[310px]">
 		<p class="text-center mt-2 text-sm hover:text-darkGray transition cursor-pointer">Don't have an account?</p>
-		<ShadcnButton class="dark:text-darkGrayDarken px-2 py-1 bg-greenJuice hover:bg-darkGreenJuice rounded-lg w-[40%]">Sign up</ShadcnButton>
+		<ShadcnButton class="dark:text-darkGrayDarken px-2 py-1 bg-greenJuice hover:bg-opacity-80 rounded-lg w-[40%]">Sign up</ShadcnButton>
 	</div>
 	</div>
 </template>
