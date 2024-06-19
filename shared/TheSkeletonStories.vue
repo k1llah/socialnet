@@ -3,7 +3,7 @@
     <div
       class="border border-darkGrayDarken rounded-xl p-6 mb-4 space-x-6 flex justify-center overflow-hidden"
     >
-      <div class="skeleton_div" v-for="i in 5">
+      <div class="skeleton-modified" v-for="i in 5">
         <div class="avatar"></div>
         <div class="name"></div>
       </div>
@@ -14,10 +14,10 @@
 <style scoped>
 @keyframes pulse {
   0% {
-    background-position: -200% 0;
+    background-position: 200% 0;
   }
   100% {
-    background-position: 200% 0;
+    background-position: -200% 0;
   }
 }
 .skeleton {
@@ -26,7 +26,7 @@
   animation: pulse 1.7s infinite;
 }
 
-.skeleton_div {
+.skeleton-modified {
   @apply space-y-3 flex flex-col items-center;
 }
 
