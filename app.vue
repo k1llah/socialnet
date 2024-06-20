@@ -6,7 +6,7 @@ const toggleDark = useToggle(dark)
 </script>
 <template>
   <div>
-    <AppHeader/>
+    <AppHeader :musicControls="true" :musicTab="false" :searchInput="false" :notifications="false" :accountTab="false"/>
     <div class="container">
     <NuxtPage />
     

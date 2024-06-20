@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import MusicControls from '~/features/MusicControls.vue'
+
 const props = defineProps({
   searchInput: {
     Boolean,
@@ -16,17 +18,25 @@ const props = defineProps({
     Boolean,
     default: true,
   },
+	musicControls:{
+		Boolean,
+		default: true
+	},
+	isPlayingMusic: {
+		Boolean,
+		default: false
+	},
 });
 </script>
 <template>
-  <div class="bg-darkGrayDarken bg-opacity-75 w-full p-3">
+  <div class="bg-darkGrayDarken bg-opacity-75 w-full p-3 fixed z-50">
     <div class="container">
       <div class="flex items-center">
         <img src="/tg.svg" class="max-w-9" alt="" />
-        <h2 class="text-lg font-medium ml-2">SocialNet</h2>
+        <h2 class="text-lg font-medium ml-2 pr-10">SocialNet</h2>
         <div class="flex gap-5 justify-between w-full">
-					<div class="flex gap-5">
-          <div class="flex relative items-center pl-10 ">
+					<div class="flex gap-5 w-full">
+          <div v-if="props.searchInput == true" class="flex relative items-center">
             <img src="/search.svg" class="max-w-6 absolute pl-2" alt="" />
             <input
               type="search"
@@ -36,13 +46,17 @@ const props = defineProps({
           </div>
           
             <img
+						v-if="props.notifications"
               src="/notification.svg"
               class="max-w-6 cursor-pointer"
               alt=""
             />
-            <img src="/music.svg" class="max-w-8 cursor-pointer" alt="" />
+            <img v-if="props.musicTab" src="/music.svg" class="max-w-8 cursor-pointer" alt="" />
+						<MusicControls :isPlaying="props.musicControls"/>
           </div>
-          <div class="flex items-center gap-2 float-right relative  cursor-pointer">
+					
+				
+          <div v-if="props.accountTab" class="flex items-center gap-2 float-right relative  cursor-pointer">
             <img
               src="/IMG_6400 copy.JPG"
               class="max-w-9 rounded-[50%]"
