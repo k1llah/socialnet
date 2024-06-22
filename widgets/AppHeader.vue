@@ -52,7 +52,7 @@ const props = defineProps({
               alt=""
             />
             <img v-if="props.musicTab" src="/music.svg" class="max-w-8 cursor-pointer" alt="" />
-						<MusicControls :isPlaying="props.musicControls"/>
+						<MusicControls :showedControls="props.musicControls" :isPlaying="props.isPlayingMusic" :author="'Cigarette after sex'" :songName="'Ķ'"/>
           </div>
 					
 				

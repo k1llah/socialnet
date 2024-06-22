@@ -2,6 +2,7 @@
 const formControls = useFormControls()
 let pass = ref('')
 const val = ref('')
+
 // watch(pass, () => {
 // 	console.log(pass.value)
 // })
