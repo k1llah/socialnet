@@ -16,7 +16,7 @@ export default withNuxt(
 		},
 		rules: {
 			'vue/html-self-closing': 'off',
-			'tailwindcss/no-custom-classname': 'off',
+			// 'tailwindcss/no-custom-classname': 'off',
 			'tailwindcss/classnames-order': ['off'],
 			'vue/html-indent': [
 				'error',
