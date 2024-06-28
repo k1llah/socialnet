@@ -1,61 +1,68 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import  autoImport  from '@pinia/nuxt'
+const isDev = process.env.NODE_ENV === 'development'
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+	ssr: true,
+	devtools: { enabled: isDev },
+	runtimeConfig: {
+		public: {
+			apiBase: 'http://localhost:3001/api',
+		},
+	},
+	app: {
+		pageTransition: { name: 'page', mode: 'default' },
+		layoutTransition: { name: 'layout', mode: 'default' },
+		head: {
+			bodyAttrs: {
+				class: 'dark:bg-[#09090b]',
+			},
+		},
+	},
+	css: ['@/assets/css/tailwind.css'],
 
-  app: {
-    pageTransition: { name: 'page', mode: 'out-in' },
-    head: {
-      bodyAttrs: {
-        class: "dark:bg-[#09090b]"
-      },
-    },
-  },
-  css: ['@/assets/css/tailwind.css'],
-  
-  modules: [[
-    '@pinia/nuxt',
-    {
-      autoImports: ['defineStore']
-    }
-  ], "@nuxtjs/tailwindcss", '@formkit/auto-animate', '@vueuse/nuxt', 'nuxt-swiper', "@dargmuesli/nuxt-cookie-control", "nuxt-lodash", "@pinia/nuxt", "shadcn-nuxt", '@nuxtjs/color-mode'],
-  shadcn: {
-    prefix: 'Shadcn',
-    componentDir: './components/Shadcn',
-  },
-  pinia: {
-    storesDirs: ['./stores/**', './stores'],
-  },
-  imports: {
-    autoImport: true,
-    dirs: ['./stores/**', '.components/**', '/components/main-components/**',  './components/**/*/*', './components/adminComponents/**/*', './components/adminComponents/**/*', './components/adminComponents/**/*/*/*', './features/**/*/*', './features/**/*', './features/**/*/*/*', './features/**/*/*/*/*', './features/**/*/*/*/*/*', './widgets/**/*/*', './widgets/**/*', './widgets/**/*/*/*', './widgets/**/*/*/*/*', './widgets/**/*/*/*/*/*'],
-  },
-  components: [
-    {
-      path: '~/components', // will get any components nested in let's say /components/test too
-      
-      pathPrefix: false,
-    },
-    {
-      path: '~/features', // will get any components nested in let's say /components/test too
-      
-      pathPrefix: false,
-    },
-    {
-      path: '~/shared', // will get any components nested in let's say /components/test too
-      
-      pathPrefix: false,
-    },
-    {
-      path: '~/widgets', // will get any components nested in let's say /components/test too
-      
-      pathPrefix: false,
-    },
-  ],
-  runtimeConfig: {
-    public: {
-      apiBase:'http://localhost:3001/api'
-    }
-  },
-  ssr:true
+	modules: [
+		'@nuxtjs/tailwindcss',
+		'@formkit/auto-animate',
+		'@vueuse/nuxt',
+		'nuxt-swiper',
+		'@dargmuesli/nuxt-cookie-control',
+		'nuxt-lodash',
+		'@pinia/nuxt',
+		'shadcn-nuxt',
+		'@nuxtjs/color-mode',
+		'@nuxt/eslint',
+	],
+
+	shadcn: {
+		prefix: 'Shadcn',
+		componentDir: './components/Shadcn',
+	},
+	pinia: {
+		storesDirs: ['./stores/**', './stores'],
+	},
+	eslint: {},
+	imports: {
+		autoImport: true,
+		dirs: ['~/components', '~/features/**/*', '~/widgets/**/*', '~/stores/**'],
+	},
+	components: [
+		{
+			path: '~/components',
+			pathPrefix: false,
+		},
+		{
+			path: '~/features',
+
+			pathPrefix: false,
+		},
+		{
+			path: '~/shared',
+
+			pathPrefix: false,
+		},
+		{
+			path: '~/widgets',
+
+			pathPrefix: false,
+		},
+	],
 })

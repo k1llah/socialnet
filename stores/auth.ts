@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
-export const useBlog = defineStore("blog", {
+export const useAuth = defineStore("auth", {
   state: () => ({
-    
+
   }),
   actions: {},
 });
