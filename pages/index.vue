@@ -12,9 +12,3 @@
 		<SocialWelcome />
 	</div>
 </template>
-<style lang="scss">
-	body {
-		width: 10px;
-		font-size: 20px;
-	}
-</style>
