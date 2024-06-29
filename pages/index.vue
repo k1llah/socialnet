@@ -8,7 +8,7 @@
 	// }
 </script>
 <template>
-	<div>
+	<div class="h-screen bg-mainDark w-9 border-mainDark flex">
 		<SocialWelcome />
 	</div>
 </template>
