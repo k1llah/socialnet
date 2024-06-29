@@ -34,7 +34,7 @@ export default withNuxt(
 					bracketSpacing: true,
 					bracketSameLine: true,
 					arrowParens: 'always',
-					proseWrap: 'always',
+					proseWrap: 'never',
 					htmlWhitespaceSensitivity: 'css',
 					vueIndentScriptAndStyle: true,
 					endOfLine: 'lf',
@@ -64,6 +64,7 @@ export default withNuxt(
 					},
 				},
 			],
+			'vue/singleline-html-element-content-newline': 'off',
 			'vue/html-indent': [
 				'error',
 				'tab',
