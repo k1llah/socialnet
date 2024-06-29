@@ -8,8 +8,7 @@
 		"generate": "nuxt generate",
 		"preview": "nuxt preview",
 		"postinstall": "nuxt prepare",
-		"prepare": "husky",
-		"preinstall": "husky"
+		"prepare": "husky"
 	},
 	"dependencies": {
 		"@dargmuesli/nuxt-cookie-control": "^8.4.2",
