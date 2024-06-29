@@ -9,7 +9,7 @@
 		"preview": "nuxt preview",
 		"postinstall": "nuxt prepare",
 		"prepare": "husky",
-		"test": "lint-staged"
+		"lint-staged": "lint-staged"
 	},
 	"dependencies": {
 		"@dargmuesli/nuxt-cookie-control": "^8.4.2",
