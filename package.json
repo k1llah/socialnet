@@ -8,7 +8,8 @@
 		"generate": "nuxt generate",
 		"preview": "nuxt preview",
 		"postinstall": "nuxt prepare",
-		"prepare": "husky"
+		"prepare": "husky",
+		"preinstall": "husky"
 	},
 	"dependencies": {
 		"@dargmuesli/nuxt-cookie-control": "^8.4.2",
@@ -60,9 +61,27 @@
 		"stylelint-scss": "^6.3.2",
 		"typescript": "^5.4.5"
 	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "npx lint-staged --allow-empty"
+		}
+	},
 	"lint-staged": {
-		"*.{js,ts,vue}": "eslint --fix, prettier --write",
-		"*.{vue}": "eslint --fix, prettier --write, stylelint --fix",
-		"*.{css,scss}": "eslint --fix, prettier --write, stylelint --fix"
+		"*.{js, ts, cjs, mjs}": [
+			"prettier --write --ignore-unknown",
+			"eslint --fix"
+		],
+		"*.{ html, jsx, tsx, vue }": [
+			"prettier --write --ignore-unknown",
+			"stylelint --fix --allow-empty-input",
+			"eslint --fix"
+		],
+		"*.{css, scss, less, sass}": [
+			"stylelint --fix --allow-empty-input",
+			"prettier --write --ignore-unknown"
+		],
+		"*.{md, json}":[
+			"prettier --write --ignore-unknown"
+		]
 	}
 }
