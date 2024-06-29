@@ -15,31 +15,13 @@ export default withNuxt(
 			vue: eslintPluginVue,
 		},
 		rules: {
-			'vue/html-self-closing': 'off',
-			// 'tailwindcss/no-custom-classname': 'off',
-			'tailwindcss/classnames-order': ['off'],
-			'vue/html-indent': [
-				'error',
-				'tab',
-				{
-					attribute: 1,
-					baseIndent: 1,
-					closeBracket: 0,
-					alignAttributesVertically: true,
-					ignores: [],
-				},
-			],
-			'vue/html-closing-bracket-newline': [
-				'error',
-				{
-					singleline: 'never',
-					multiline: 'never',
-					selfClosingTag: {
-						singleline: 'never',
-						multiline: 'never',
-					},
-				},
-			],
+			/**
+			 * Eslint
+			 */
+
+			/**
+			 * Prettier
+			 */
 			'prettier/prettier': [
 				'error',
 				{
@@ -61,6 +43,39 @@ export default withNuxt(
 					singleAttributePerLine: true,
 				},
 			],
+
+			/**
+			 * Tailwindcss
+			 */
+			'tailwindcss/no-custom-classname': 'off',
+			'tailwindcss/classnames-order': ['warn'],
+
+			/**
+			 * Vue
+			 */
+			'vue/html-closing-bracket-newline': [
+				'error',
+				{
+					singleline: 'never',
+					multiline: 'never',
+					selfClosingTag: {
+						singleline: 'never',
+						multiline: 'never',
+					},
+				},
+			],
+			'vue/html-indent': [
+				'error',
+				'tab',
+				{
+					attribute: 1,
+					baseIndent: 1,
+					closeBracket: 0,
+					alignAttributesVertically: true,
+					ignores: [],
+				},
+			],
+			'vue/html-self-closing': 'off',
 		},
 	},
 	{

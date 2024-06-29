@@ -11,11 +11,6 @@ export default defineNuxtConfig({
 	app: {
 		pageTransition: { name: 'page', mode: 'default' },
 		layoutTransition: { name: 'layout', mode: 'default' },
-		head: {
-			bodyAttrs: {
-				class: 'dark:bg-[#09090b]',
-			},
-		},
 	},
 	css: ['@/assets/css/tailwind.css'],
 
@@ -43,6 +38,16 @@ export default defineNuxtConfig({
 	imports: {
 		autoImport: true,
 		dirs: ['~/components', '~/features/**/*', '~/widgets/**/*', '~/stores/**'],
+	},
+	colorMode: {
+		preference: 'system', // default value of $colorMode.preference
+		fallback: 'dark', // fallback value if not system preference found
+		hid: 'nuxt-color-mode-script',
+		globalName: '__NUXT_COLOR_MODE__',
+		componentName: 'ColorScheme',
+		classPrefix: '',
+		classSuffix: '',
+		storageKey: 'nuxt-color-mode',
 	},
 	components: [
 		{
