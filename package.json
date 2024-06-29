@@ -67,20 +67,20 @@
 		}
 	},
 	"lint-staged": {
-		"*.{js, ts, cjs, mjs}": [
+		"*.{js,ts,cjs,mjs}": [
 			"prettier --write --ignore-unknown",
 			"eslint --fix"
 		],
-		"*.{ html, jsx, tsx, vue }": [
+		"*.{html,jsx,tsx,vue}": [
 			"prettier --write --ignore-unknown",
 			"stylelint --fix --allow-empty-input",
 			"eslint --fix"
 		],
-		"*.{css, scss, less, sass}": [
+		"*.{css,scss,less,sass}": [
 			"stylelint --fix --allow-empty-input",
 			"prettier --write --ignore-unknown"
 		],
-		"*.{md, json}":[
+		"*.{md,json}": [
 			"prettier --write --ignore-unknown"
 		]
 	}
