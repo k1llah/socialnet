@@ -2,9 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 body {
-	@apply dark:bg-mainDark dark:text-darkWhite bg-mainBg
-	
+	@apply dark:bg-mainDark dark:text-darkWhite bg-mainBg;
+}
+.vti__input,
+.vti__phone {
+	position: unset;
+	padding: 3px;
+	border: 0;
+	background-color: #333;
+}
+.vue-tel-input {
+	position: unset;
+	max-width: inherit;
+	transition: all 0.3s ease linear;
+}
+.vti__dropdown {
+	transition: all 0.3s ease linear !important;
+	background-color: #333;
+}
+.vti__dropdown:hover {
+	transition: all 0.3s ease linear !important;
+	background-color: black !important;
+}
+.vue-tel-input :focus-within {
+	transition: all 0.3s ease linear !important;
 }
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }

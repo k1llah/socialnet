@@ -49,6 +49,7 @@ export default withNuxt(
 			 */
 			'tailwindcss/no-custom-classname': 'off',
 			'tailwindcss/classnames-order': ['warn'],
+			'tailwindcss/no-unnecessary-arbitrary-value': 'off',
 
 			/**
 			 * Vue
@@ -77,12 +78,15 @@ export default withNuxt(
 				},
 			],
 			'vue/html-self-closing': 'off',
+			'vue/multi-word-component-names': 'off',
+			'vue/no-multiple-template-root': 'off',
+			'no-explicit-any': 'off',
 		},
 	},
 	{
 		files: ['error.vue', 'app.vue', 'layouts/**/*.vue', 'pages/**/*.vue'],
 		rules: {
-			'vue/multi-word-component-names': 'off',
+			'vue/no-multiple-template-roots': 'off',
 		},
 	},
 )

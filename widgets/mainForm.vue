@@ -1,29 +1,53 @@
 <script setup lang="ts">
-const formControls = useFormControls()
-let pass = ref('')
-const val = ref('')
+	// const formControls = useFormControls()
+	const pass = ref('')
+	const val = ref('')
 
-// watch(pass, () => {
-// 	console.log(pass.value)
-// })
-// watch(val, () => {
-// 	console.log(val.value)
-// })
+	// watch(pass, () => {
+	// 	console.log(pass.value)
+	// })
+	// watch(val, () => {
+	// 	console.log(val.value)
+	// })
 </script>
 <template>
-	<div class="flex flex-col gap-5 items-center">
-		<div class="flex justify-center items-center flex-col p-9 rounded-xl dark:bg-darkenGray border-darkGrayDarken border-[1px] min-w-[310px]">
-			<div class="flex gap-3 flex-col items-center">
-				<img src="/tg.svg" class="max-w-[60px]" alt="">
+	<div class="flex flex-col items-center gap-5">
+		<div
+			class="flex min-w-[310px] flex-col items-center justify-center rounded-xl border border-darkGrayDarken p-9 dark:bg-darkenGray">
+			<div class="flex flex-col items-center gap-3">
+				<img
+					src="/tg.svg"
+					class="max-w-[60px]"
+					alt="" />
 				<h2 class="text-xl">Sign in to Socialnet</h2>
 			</div>
-		<TheInput :label="' Email'" :name="'email'" :type="''" v-model="val" class="mt-7"/>
-		<TheInput :label="'Password'" :name="'password'" :type="''" v-model="pass" class="mt-7"/>
-		<ShadcnButton class="dark:text-darkWhite border-b-[2px] mt-5 rounded-none w-[50%]  hover:transition-all hover:duration-300 transition-all duration-500 hover:dark:text-greenJuice hover:border-greenJuice">Sign in</ShadcnButton>
-	</div>
-	<div class="flex justify-center flex-col items-center gap-3 rounded-xl p-5 dark:bg-darkenGray border-darkGrayDarken border-[1px] min-w-[310px]">
-		<p class="text-center mt-2 text-sm hover:text-darkGray transition cursor-pointer">Don't have an account?</p>
-		<ShadcnButton class="dark:text-darkGrayDarken px-2 py-1 bg-greenJuice hover:bg-opacity-80 rounded-lg w-[40%]">Sign up</ShadcnButton>
-	</div>
+			<TheInput
+				v-model="val"
+				:label="' Email'"
+				:name="'email'"
+				:type="''"
+				class="mt-7" />
+			<TheInput
+				v-model="pass"
+				:label="'Password'"
+				:name="'password'"
+				:type="''"
+				class="mt-7" />
+			<ShadcnButton
+				class="mt-5 w-[50%] rounded-none border-b-2 transition-all duration-500 hover:border-greenJuice hover:transition-all hover:duration-300 dark:text-darkWhite hover:dark:text-greenJuice">
+				Sign in
+			</ShadcnButton>
+		</div>
+		<div
+			class="flex min-w-[310px] flex-col items-center justify-center gap-3 rounded-xl border border-darkGrayDarken p-5 dark:bg-darkenGray">
+			<p class="mt-2 cursor-pointer text-center text-sm transition hover:text-darkGray">
+				Don't have an account?
+			</p>
+
+			<ShadcnButton
+				class="hover:bg-opacity/80 w-2/5 rounded-lg bg-greenJuice px-2 py-1 dark:text-darkGrayDarken">
+				<NuxtLink to="/signUp"> Sign up </NuxtLink>
+			</ShadcnButton>
+		</div>
 	</div>
 </template>
