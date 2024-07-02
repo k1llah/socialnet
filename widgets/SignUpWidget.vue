@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+	import { VueTelInput } from 'vue-tel-input'
 	const value = ref('')
 </script>
 <template>
@@ -6,7 +7,7 @@
 		<div class="flex rounded-xl bg-darkenGray p-3 sm:flex-col md:flex-row">
 			<div
 				class="flex max-w-[360px] flex-col items-center justify-center gap-2 rounded-xl bg-darkGrayDarken/40 px-10 sm:hidden md:flex">
-				<div class="my-10 flex max-w-[310px] flex-col items-center gap-3">
+				<div class="my-10 flex max-w-[310px] flex-col items-center gap-3 text-center">
 					<div class="max-w-fit rounded-lg bg-white">
 						<img
 							src="/qr.svg"
@@ -43,7 +44,7 @@
 				</div>
 
 				<ShadcnButton class="w-full bg-darkWhite text-mainDark">Continue</ShadcnButton>
-				<div class="mt-20">
+				<div>
 					<p class="text-xs text-darkGray">
 						By clicking "Continue", you accept the user agreement and privacy policy
 					</p>
