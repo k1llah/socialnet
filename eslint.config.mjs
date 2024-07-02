@@ -49,6 +49,7 @@ export default withNuxt(
 			 */
 			'tailwindcss/no-custom-classname': 'off',
 			'tailwindcss/classnames-order': ['warn'],
+			'tailwindcss/no-unnecessary-arbitrary-value': 'off',
 
 			/**
 			 * Vue

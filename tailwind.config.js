@@ -40,6 +40,7 @@ module.exports = {
 			darkenGray: '#121212',
 			nightPurple: '#030712',
 			darkPurple: '#190e39',
+			white: '#fff',
 		},
 		extend: {
 			keyframes: {
