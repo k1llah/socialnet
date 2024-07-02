@@ -85,6 +85,9 @@
 				</div>
 			</div>
 			<MainForm />
+			<ClientOnly fallback="Loading... ">
+				<vue-tel-input class=""></vue-tel-input>
+			</ClientOnly>
 		</div>
 		<TheFooter class="mt-16" />
 	</div>
