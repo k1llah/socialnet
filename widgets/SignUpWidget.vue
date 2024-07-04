@@ -1,7 +1,4 @@
-<script lang="ts" setup>
-	import { VueTelInput } from 'vue-tel-input'
-	const value = ref('')
-</script>
+<script lang="ts" setup></script>
 <template>
 	<div class="flex h-screen items-center justify-center">
 		<div class="flex rounded-xl bg-darkenGray p-3 sm:flex-col md:flex-row">
@@ -32,15 +29,9 @@
 				</span>
 
 				<div class="max-w-[310px]">
-					<vue-tel-input
-						v-model="value"
-						:required="true"
-						:input-options="{
-							placeholder: 'enter',
-						}"
-						:preferred-countries="['ru']"
-						class=""
-						:valid-characters-only="true"></vue-tel-input>
+					<TheInput
+						:label="'Email'"
+						:name="'email'"></TheInput>
 				</div>
 
 				<ShadcnButton class="w-full bg-darkWhite text-mainDark">Continue</ShadcnButton>
