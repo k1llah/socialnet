@@ -18,29 +18,7 @@
 					<ShadcnButton>Details</ShadcnButton>
 				</div>
 			</div>
-			<div class="flex max-w-[300px] flex-col items-center gap-5 p-5 text-center">
-				<img
-					src="/tg.svg"
-					class="max-w-12"
-					alt="" />
-				<h3 class="text-xl font-bold">Enter Number</h3>
-				<span class="text-base text-darkGray/60">
-					Your phone number will be used for account login
-				</span>
-
-				<div class="max-w-[310px]">
-					<TheInput
-						:label="'Email'"
-						:name="'email'"></TheInput>
-				</div>
-
-				<ShadcnButton class="w-full bg-darkWhite text-mainDark">Continue</ShadcnButton>
-				<div>
-					<p class="text-xs text-darkGray">
-						By clicking "Continue", you accept the user agreement and privacy policy
-					</p>
-				</div>
-			</div>
+			<SignUpFeature />
 		</div>
 	</div>
 </template>
