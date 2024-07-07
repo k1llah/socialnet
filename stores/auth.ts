@@ -25,7 +25,7 @@ export const useAuth = defineStore('auth', {
 				const response = await $fetch('http://localhost:3001/api/verify-email', {
 					method: 'GET',
 				})
-				this.startCountDown()
+				// this.startCountDown()
 				console.log(response)
 				// } else {
 				// 	this.startCountDown()

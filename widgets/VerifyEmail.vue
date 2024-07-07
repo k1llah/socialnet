@@ -64,7 +64,8 @@
 				<div class="flex w-full items-center justify-center">
 					<ShadcnButton
 						class="m-auto w-fit bg-darkWhite text-mainDark"
-						:disabled="auth.timeoutSendAgain && auth.timeoutSendAgain > 0">
+						:disabled="auth.timeoutSendAgain && auth.timeoutSendAgain > 0"
+						@click="auth.emailVerify(), auth.startCountDown()">
 						{{ buttonContent }}
 					</ShadcnButton>
 				</div>
