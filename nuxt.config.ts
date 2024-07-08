@@ -9,7 +9,7 @@ export default defineNuxtConfig({
 		},
 	},
 	app: {
-		pageTransition: { name: 'page', mode: 'default' },
+		pageTransition: { name: 'slide', mode: 'default' },
 		layoutTransition: { name: 'layout', mode: 'default' },
 	},
 	css: ['@/assets/css/tailwind.css'],

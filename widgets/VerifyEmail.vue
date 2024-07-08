@@ -2,7 +2,6 @@
 	const auth = useAuth()
 	const value = ref<string[]>([])
 	const error = ref('')
-	const buttonContent = ref('Send again')
 	const handleComplete = (e: string[]) => {
 		if (e.join('') == '12345') alert(e.join(''))
 		else alert('Wrong code')
@@ -14,11 +13,6 @@
 
 	watchEffect(() => {
 		console.log(auth.timeoutSendAgain)
-		if (auth.timeoutSendAgain && auth.timeoutSendAgain > 0) {
-			buttonContent.value = `Wait ${auth.timeoutSendAgain} seconds to send code again`
-		} else {
-			buttonContent.value = 'Send again'
-		}
 	})
 
 	onBeforeMount(async () => {
@@ -62,12 +56,7 @@
 				</div>
 				<p class="p-3 text-sm text-redJuice">{{ error }}</p>
 				<div class="flex w-full items-center justify-center">
-					<ShadcnButton
-						class="m-auto w-fit bg-darkWhite text-mainDark"
-						:disabled="auth.timeoutSendAgain && auth.timeoutSendAgain > 0"
-						@click="auth.emailVerify(), auth.startCountDown()">
-						{{ buttonContent }}
-					</ShadcnButton>
+					<TimeoutButton />
 				</div>
 			</div>
 		</div>

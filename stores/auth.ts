@@ -38,13 +38,6 @@ export const useAuth = defineStore('auth', {
 		},
 		// Count down function
 		async startCountDown() {
-			const timeoutRes = await $fetch<{ timeoutSendAgain: number }>(
-				'http://localhost:3001/api/timeout-response',
-				{
-					method: 'GET',
-				},
-			)
-			this.timeoutSendAgain = timeoutRes.timeoutSendAgain
 			const interval = setInterval(() => {
 				if (this.timeoutSendAgain && this.timeoutSendAgain > 0) {
 					this.timeoutSendAgain--

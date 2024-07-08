@@ -2,7 +2,6 @@
 	// const formControls = useFormControls()
 	const pass = ref('')
 	const val = ref('')
-
 	// watch(pass, () => {
 	// 	console.log(pass.value)
 	// })
@@ -51,3 +50,4 @@
 		</div>
 	</div>
 </template>
+<style></style>

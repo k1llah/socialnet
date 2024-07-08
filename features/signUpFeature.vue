@@ -3,6 +3,21 @@
 	const emailVal = ref('')
 	auth.email = emailVal.value
 	const error = auth.emailError
+
+	async function handleRegister() {
+		try {
+			const data = await $fetch<{ expires: string }>(' http://localhost:3001/api/register', {
+				method: 'POST',
+				body: {
+					email: auth.email,
+				},
+			})
+
+			console.log(data)
+		} catch (error) {
+			console.log(error)
+		}
+	}
 </script>
 <template>
 	<div class="flex max-w-[300px] flex-col items-center gap-5 p-5 text-center">
@@ -27,7 +42,7 @@
 			class="w-full bg-darkWhite text-mainDark"
 			:class="{ 'disabled opacity-50 ': !auth.email }"
 			:disabled="auth.email.length === 0"
-			@click="auth.emailVerify()">
+			@click="auth.emailVerify(), handleRegister()">
 			Continue
 		</ShadcnButton>
 		<div>
