@@ -16,14 +16,13 @@
 	</div>
 </template>
 <style>
-	.slide-enter-active,
-	.slide-leave-active {
-		transition: all 0.8s;
+	.page-enter-active,
+	.page-leave-active {
+		transition: all 0.5s;
 	}
 
-	.slide-enter,
-	.slide-leave-to {
-		transform: translateX(-100%);
+	.page-enter,
+	.page-leave-to {
 		opacity: 0;
 		filter: blur(1rem);
 	}

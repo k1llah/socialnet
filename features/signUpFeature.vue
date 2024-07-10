@@ -3,7 +3,7 @@
 	const emailVal = ref('')
 	auth.email = emailVal.value
 	const error = auth.emailError
-
+	const router = useRouter()
 	async function handleRegister() {
 		try {
 			const data = await $fetch<{ expires: string }>(' http://localhost:3001/api/register', {
@@ -42,7 +42,7 @@
 			class="w-full bg-darkWhite text-mainDark"
 			:class="{ 'disabled opacity-50 ': !auth.email }"
 			:disabled="auth.email.length === 0"
-			@click="auth.emailVerify(), handleRegister()">
+			@click="auth.emailVerify(), handleRegister(), router.push('/test2')">
 			Continue
 		</ShadcnButton>
 		<div>
