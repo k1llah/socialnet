@@ -25,7 +25,7 @@
 			<div class="text-center">
 				<h1
 					class="text-3xl font-extrabold dark:text-white"
-					@click="auth.emailVerify()">
+					@click="auth.handleRegister()">
 					Enter code from email
 				</h1>
 				<p class="pt-2 text-sm text-darkGray">

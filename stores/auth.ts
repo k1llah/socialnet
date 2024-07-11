@@ -13,27 +13,29 @@ export const useAuth = defineStore('auth', {
 		password: '',
 		isPasswordCorrect: false,
 		confirmPassword: '',
+		isRegister: false,
 	}),
 	actions: {
 		// Verify email function
-		async emailVerify() {
+		async handleRegister() {
 			try {
 				this.isEmailCorrect = this.emailRegex.test(this.email)
-				console.log(this.email)
-				console.log(this.isEmailCorrect)
-				// if (this.email.length > 2 && this.isEmailCorrect === true) {
-				const response = await $fetch('http://localhost:3001/api/verify-email', {
-					method: 'GET',
+				if (this.email.length < 2 && this.isEmailCorrect === false)
+					this.emailError = 'Email is not valid'
+				const data = await $fetch<{
+					expires: string
+					isRegistered: boolean
+				}>(' http://localhost:3001/api/register', {
+					method: 'POST',
+					body: {
+						email: this.email,
+					},
 				})
-				// this.startCountDown()
-				console.log(response)
-				// } else {
-				// 	this.startCountDown()
-				// 	this.isEmailCorrect = false
-				// 	this.emailError = 'Email is not valid'
-				// }
-			} catch (err) {
-				console.log(err)
+
+				this.isRegister = data.isRegistered
+				console.log('auth pen', data, 'var', this.isRegister)
+			} catch (error) {
+				console.log(error)
 			}
 		},
 		// Count down function
