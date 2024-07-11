@@ -43,7 +43,7 @@
 		<ShadcnButton
 			class="m-auto w-fit bg-darkWhite text-mainDark"
 			:disabled="auth.timeoutSendAgain && auth.timeoutSendAgain > 0"
-			@click="auth.emailVerify(), resetTimer()">
+			@click="resetTimer()">
 			{{ buttonContent }}
 		</ShadcnButton>
 	</div>

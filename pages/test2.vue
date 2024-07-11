@@ -3,6 +3,7 @@
 		pageTransition: {
 			name: 'slide-reverse',
 		},
+		middleware: ['auth-middleware'],
 	})
 </script>
 <template>

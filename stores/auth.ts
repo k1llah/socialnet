@@ -13,7 +13,7 @@ export const useAuth = defineStore('auth', {
 		password: '',
 		isPasswordCorrect: false,
 		confirmPassword: '',
-		isRegister: false,
+		isRegister: null as boolean | null,
 	}),
 	actions: {
 		// Verify email function
@@ -22,7 +22,8 @@ export const useAuth = defineStore('auth', {
 				this.isEmailCorrect = this.emailRegex.test(this.email)
 				if (this.email.length < 2 && this.isEmailCorrect === false)
 					this.emailError = 'Email is not valid'
-				const data = await $fetch<{
+
+				const response = await $fetch<{
 					expires: string
 					isRegistered: boolean
 				}>(' http://localhost:3001/api/register', {
@@ -31,9 +32,8 @@ export const useAuth = defineStore('auth', {
 						email: this.email,
 					},
 				})
-
-				this.isRegister = data.isRegistered
-				console.log('auth pen', data, 'var', this.isRegister)
+				this.isRegister = response.isRegistered
+				console.log('auth pen', response, 'var', this.isRegister)
 			} catch (error) {
 				console.log(error)
 			}

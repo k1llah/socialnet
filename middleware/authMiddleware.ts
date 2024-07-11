@@ -1,5 +1,5 @@
-export default defineNuxtRouteMiddleware(() => {
+export default defineNuxtRouteMiddleware(async () => {
 	const auth = useAuth()
-	if (!auth.isEmailCorrect && auth.isRegister) return navigateTo('/login')
-	navigateTo('/test2')
+	if (auth.isRegister === null) return navigateTo('/')
+	if (auth.isRegister === false) return navigateTo('/test2')
 })
