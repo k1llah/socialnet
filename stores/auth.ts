@@ -13,38 +13,33 @@ export const useAuth = defineStore('auth', {
 		password: '',
 		isPasswordCorrect: false,
 		confirmPassword: '',
+		isRegister: null as boolean | null,
 	}),
 	actions: {
 		// Verify email function
-		async emailVerify() {
+		async handleRegister() {
 			try {
 				this.isEmailCorrect = this.emailRegex.test(this.email)
-				console.log(this.email)
-				console.log(this.isEmailCorrect)
-				// if (this.email.length > 2 && this.isEmailCorrect === true) {
-				const response = await $fetch('http://localhost:3001/api/verify-email', {
-					method: 'GET',
+				if (this.email.length < 2 && this.isEmailCorrect === false)
+					this.emailError = 'Email is not valid'
+
+				const response = await $fetch<{
+					expires: string
+					isRegistered: boolean
+				}>(' http://localhost:3001/api/register', {
+					method: 'POST',
+					body: {
+						email: this.email,
+					},
 				})
-				this.startCountDown()
-				console.log(response)
-				// } else {
-				// 	this.startCountDown()
-				// 	this.isEmailCorrect = false
-				// 	this.emailError = 'Email is not valid'
-				// }
-			} catch (err) {
-				console.log(err)
+				this.isRegister = response.isRegistered
+				console.log('auth pen', response, 'var', this.isRegister)
+			} catch (error) {
+				console.log(error)
 			}
 		},
 		// Count down function
 		async startCountDown() {
-			const timeoutRes = await $fetch<{ timeoutSendAgain: number }>(
-				'http://localhost:3001/api/timeout-response',
-				{
-					method: 'GET',
-				},
-			)
-			this.timeoutSendAgain = timeoutRes.timeoutSendAgain
 			const interval = setInterval(() => {
 				if (this.timeoutSendAgain && this.timeoutSendAgain > 0) {
 					this.timeoutSendAgain--

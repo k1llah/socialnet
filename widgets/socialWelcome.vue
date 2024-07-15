@@ -2,7 +2,7 @@
 <template>
 	<div class="flex flex-col justify-center sm:h-auto md:h-screen">
 		<div
-			class="flex items-center gap-5 sm:mt-5 sm:flex-col-reverse sm:justify-center md:mt-[unset] md:flex-row md:justify-around">
+			class="flex items-center gap-5 sm:mt-24 sm:flex-col sm:justify-center md:mt-[unset] md:flex-row md:justify-around">
 			<div class="flex flex-col items-center justify-center">
 				<div
 					class="typing-effect border-opacity/65 bg-opacity/85 mb-10 w-[300px] rounded-md border-l-[3px] border-redJuice bg-darkPurple p-3">
@@ -75,7 +75,7 @@
 					<p class="pt-3 text-center text-sm">Happy networking!</p>
 				</div>
 				<div class="mt-12 flex flex-col">
-					<div class="flex gap-2">
+					<div class="gap-2 sm:hidden md:flex">
 						<img
 							class="w-5"
 							src="/tg.svg"

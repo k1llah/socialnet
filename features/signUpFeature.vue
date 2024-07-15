@@ -3,6 +3,7 @@
 	const emailVal = ref('')
 	auth.email = emailVal.value
 	const error = auth.emailError
+	const router = useRouter()
 </script>
 <template>
 	<div class="flex max-w-[300px] flex-col items-center gap-5 p-5 text-center">
@@ -27,7 +28,7 @@
 			class="w-full bg-darkWhite text-mainDark"
 			:class="{ 'disabled opacity-50 ': !auth.email }"
 			:disabled="auth.email.length === 0"
-			@click="auth.emailVerify()">
+			@click="auth.handleRegister(), router.push('/test2')">
 			Continue
 		</ShadcnButton>
 		<div>
