@@ -18,7 +18,6 @@ export default defineNuxtConfig({
 		'@nuxtjs/tailwindcss',
 		'@formkit/auto-animate',
 		'@vueuse/nuxt',
-		'nuxt-swiper',
 		'@dargmuesli/nuxt-cookie-control',
 		'nuxt-lodash',
 		'@pinia/nuxt',
